@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -29,6 +26,8 @@ public class Course {
     @NotNull
     @Min(3)
     private int credit;
+    @ManyToOne()
+    private Department department;
 
     public Course(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 3) String instructor, @NotNull @Size(min = 10) String description, @NotNull @Min(3) int credit) {
         this.title = title;

@@ -10,4 +10,4 @@ public class SpringBoot303Application {
 		SpringApplication.run(SpringBoot303Application.class, args);
 	}
 
-}
+} 
